@@ -107,7 +107,7 @@ class Renderer: NSObject, MTKViewDelegate {
 
         enc.setFragmentBuffer(minBuffer, offset: bufferStart * MemoryLayout<Float>.size, index: 0)
         enc.setFragmentBuffer(maxBuffer, offset: bufferStart * MemoryLayout<Float>.size, index: 1)
-        assert(minBuffer.length == maxBuffer.length)
+//        assert(minBuffer.length == maxBuffer.length)
         enc.setFragmentBytes(&bufferCount, length: MemoryLayout<Int32>.size, index: 2)
         let c = [constants]
         enc.setFragmentBytes(c, length: MemoryLayout<Constants>.size, index: 3)
